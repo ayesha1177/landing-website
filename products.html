@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('images/Products.png'); /* Set your background image here */
+            background-size: cover; /* Ensure the background covers the entire viewport */
+            background-position: center; /* Center the background image */
+            color: #000; /* Full black text color */
+        }
+
+        header {
+            background-color: rgba(8, 43, 57, 0.9); /* Faint sky blue header background with transparency */
+            color: #ffffff; /* Full black text for header */
+            padding: 20px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for header */
+        }
+
+        .product-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 40px; /* Increased padding for more space */
+            background-color: #ffffff; /* Solid white background */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+        }
+
+        .category {
+            margin-bottom: 30px;
+        }
+
+        .category .question {
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .category .answer {
+            display: none;
+            margin: 5px 0 15px;
+            color: #555;
+        }
+
+        .visit-shop {
+            font-size: 1.4rem;
+            margin-top: 20px;
+            text-align: center;
+            color: #000; /* Full black for visit shop statement */
+            font-weight: bold; /* Make the statement bold */
+        }
+
+        @media screen and (max-width: 768px) {
+            .product-container {
+                width: 90%; /* Adjust width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Products Available at Janseva Medical Shop
+    </header>
+
+    <div class="product-container">
+        <!-- Category Section -->
+        <div class="category">
+            <div class="question">Medicines</div>
+            <div class="answer">
+                <p>We offer a wide range of medicines, including:</p>
+                <ul class="category-list">
+                    <li>Prescription Medications</li>
+                    <li>Over-the-Counter Drugs</li>
+                    <li>Homeopathic Remedies</li>
+                    <li>Ayurvedic Products</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="question">Healthcare Products</div>
+            <div class="answer">
+                <p>Explore our selection of healthcare products:</p>
+                <ul class="category-list">
+                    <li>Vitamins & Supplements</li>
+                    <li>First Aid Supplies</li>
+                    <li>Personal Care Items</li>
+                    <li>Medical Equipment</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="question">Personal Care</div>
+            <div class="answer">
+                <p>We also stock a variety of personal care items:</p>
+                <ul class="category-list">
+                    <li>Skin Care Products</li>
+                    <li>Hair Care Products</li>
+                    <li>Oral Hygiene Products</li>
+                    <li>Cosmetics</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="question">Health Monitoring</div>
+            <div class="answer">
+                <p>Keep track of your health with our monitoring tools:</p>
+                <ul class="category-list">
+                    <li>Blood Pressure Monitors</li>
+                    <li>Glucose Meters</li>
+                    <li>Thermometers</li>
+                    <li>Pulse Oximeters</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="visit-shop">Visit our shop to explore these products!</p>
+    </div>
+
+    <script>
+        const questions = document.querySelectorAll('.question');
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
